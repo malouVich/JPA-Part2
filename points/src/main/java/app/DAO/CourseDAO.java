@@ -22,20 +22,21 @@ public class CourseDAO implements GenericDAO<Course, Integer> {
         return instance;
     }
 
-    @Override
-    public void save(Course entity)
-    {
 
+    @Override
+    public Course create(Course entity)
+    {
+        return null;
     }
 
     @Override
-    public Optional<Course> findById(Integer integer)
+    public Course findById(Integer integer)
     {
-        return Optional.empty();
+        return null;
     }
 
     @Override
-    public List<Course> findAll()
+    public List<Course> getAll()
     {
         return List.of();
     }
@@ -47,7 +48,7 @@ public class CourseDAO implements GenericDAO<Course, Integer> {
     }
 
     @Override
-    public void delete(Integer integer)
+    public void remove(Integer integer)
     {
 
     }

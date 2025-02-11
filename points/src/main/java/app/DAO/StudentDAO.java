@@ -23,20 +23,21 @@ public class StudentDAO implements GenericDAO<Student, Integer> {
         return instance;
     }
 
-    @Override
-    public void save(Student entity)
-    {
 
+    @Override
+    public Student create(Student entity)
+    {
+        return null;
     }
 
     @Override
-    public Optional<Student> findById(Integer integer)
+    public Student findById(Integer integer)
     {
-        return Optional.empty();
+        return null;
     }
 
     @Override
-    public List<Student> findAll()
+    public List<Student> getAll()
     {
         return List.of();
     }
@@ -48,7 +49,7 @@ public class StudentDAO implements GenericDAO<Student, Integer> {
     }
 
     @Override
-    public void delete(Integer integer)
+    public void remove(Integer integer)
     {
 
     }

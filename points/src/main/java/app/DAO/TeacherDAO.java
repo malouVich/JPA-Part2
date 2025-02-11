@@ -23,20 +23,21 @@ public class TeacherDAO implements GenericDAO<Teacher, Integer> {
         return instance;
     }
 
-    @Override
-    public void save(Teacher entity)
-    {
 
+    @Override
+    public Teacher create(Teacher entity)
+    {
+        return null;
     }
 
     @Override
-    public Optional<Teacher> findById(Integer integer)
+    public Teacher findById(Integer integer)
     {
-        return Optional.empty();
+        return null;
     }
 
     @Override
-    public List<Teacher> findAll()
+    public List<Teacher> getAll()
     {
         return List.of();
     }
@@ -48,7 +49,7 @@ public class TeacherDAO implements GenericDAO<Teacher, Integer> {
     }
 
     @Override
-    public void delete(Integer integer)
+    public void remove(Integer integer)
     {
 
     }
