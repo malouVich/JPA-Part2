@@ -1,6 +1,9 @@
 package app.config;
 
+import app.entities.Course;
 import app.entities.Point;
+import app.entities.Student;
+import app.entities.Teacher;
 import app.utils.Utils;
 
 import jakarta.persistence.EntityManagerFactory;
@@ -42,6 +45,9 @@ public class HibernateConfig {
     // TODO: IMPORTANT: Add Entity classes here for them to be registered with Hibernate
     private static void getAnnotationConfiguration(Configuration configuration) {
         configuration.addAnnotatedClass(Point.class);
+        configuration.addAnnotatedClass(Student.class);
+        configuration.addAnnotatedClass(Teacher.class);
+        configuration.addAnnotatedClass(Course.class);
 
     }
 

@@ -5,6 +5,8 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @ToString
@@ -13,15 +15,29 @@ import java.time.LocalDateTime;
 @Builder
 @DynamicUpdate
 @Entity
-@Table(name = "teacher")
+@Table(name = "courses")
 
 public class Course {
     @Id //Primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private CourseName courseName;
+
+    @Column(nullable = false)
     private String description;
+
+    @Column(nullable = false)
     private LocalDate endDate;
+
+    @Column(nullable = false)
     private LocalDate startDate;
+
+    @ManyToMany(mappedBy = "courses", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Student> students = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "teacher_id", referencedColumnName = "id", nullable = false)
+    private Teacher teacher;
 }

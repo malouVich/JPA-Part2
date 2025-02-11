@@ -1,0 +1,54 @@
+package app.DAO;
+
+import app.entities.Course;
+import jakarta.persistence.EntityManagerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+public class CourseDAO implements GenericDAO<Course, Integer> {
+    private final List<Course> courses = new ArrayList<>();
+    private static EntityManagerFactory emf;
+    private static CourseDAO instance;
+
+    private CourseDAO(){}
+
+    public static CourseDAO getInstance(EntityManagerFactory _emf){
+        if(emf == null){
+            emf = _emf;
+            instance = new CourseDAO();
+        }
+        return instance;
+    }
+
+    @Override
+    public void save(Course entity)
+    {
+
+    }
+
+    @Override
+    public Optional<Course> findById(Integer integer)
+    {
+        return Optional.empty();
+    }
+
+    @Override
+    public List<Course> findAll()
+    {
+        return List.of();
+    }
+
+    @Override
+    public void update(Course entity)
+    {
+
+    }
+
+    @Override
+    public void delete(Integer integer)
+    {
+
+    }
+}
