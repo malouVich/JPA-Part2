@@ -5,9 +5,9 @@ import jakarta.persistence.EntityManagerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class CourseDAO implements GenericDAO<Course, Integer> {
+public class CourseDAO implements IDAO<Course, Integer>
+{
     private final List<Course> courses = new ArrayList<>();
     private static EntityManagerFactory emf;
     private static CourseDAO instance;

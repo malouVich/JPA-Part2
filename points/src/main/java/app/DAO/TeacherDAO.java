@@ -5,9 +5,9 @@ import jakarta.persistence.EntityManagerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class TeacherDAO implements GenericDAO<Teacher, Integer> {
+public class TeacherDAO implements IDAO<Teacher, Integer>
+{
     private final List<Teacher> teachers = new ArrayList<>();
 
     private static EntityManagerFactory emf;

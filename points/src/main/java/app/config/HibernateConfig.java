@@ -1,7 +1,6 @@
 package app.config;
 
 import app.entities.Course;
-import app.entities.Point;
 import app.entities.Student;
 import app.entities.Teacher;
 import app.utils.Utils;

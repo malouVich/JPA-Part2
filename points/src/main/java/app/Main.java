@@ -4,14 +4,9 @@ import app.DAO.CourseDAO;
 import app.DAO.StudentDAO;
 import app.DAO.TeacherDAO;
 import app.config.HibernateConfig;
-import app.entities.Point;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Query;
-import jakarta.persistence.TypedQuery;
-
-import java.util.List;
 
 public class Main {
 
